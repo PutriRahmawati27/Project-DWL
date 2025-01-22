@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dream Job</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        .hero {
+            background: #e7eff8;
+            padding: 50px 0;
+        }
+        .statistic {
+            background: #dfebf7;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .img {
+            width: 200px;
+            
+        }
+        .hero-section {
+            height: 100vh; 
+            background-image: url(img/bg.jpg); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .border{
+        border: 1px solid #ddd; /* Garis border */
+        border-radius: 8px; /* Sudut melengkung */
+        padding: 20px; /* Ruang di dalam border */
+        text-align: center; /* Rata tengah untuk teks */
+        transition: box-shadow 0.3s; /* Efek transisi untuk bayangan */
+        }
+        .card-custom {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+        .card-img-top {
+            max-width: 100px;
+            margin: 20px auto 10px auto;
+        }
+    </style>
+</head>
+<body data-aos-easing="ease" data-aos-duration="300" data-aos-delay="0" style="background-color: ivory;">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: ivory;">
+    <a class="navbar-brand" href="#">Dream Job</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#home" style="color: brown;">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="#jobs" style="color: brown;">Lowongan Pekerjaan</a></li>
+            <li class="nav-item"><a class="nav-link" href="#companies" style="color: brown;">Perusahaan</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gabung" style="color: brown;">Kenapa Bergabung</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact" style="color: brown;">Hubungi</a></li>
+        </ul>
+        <div class="navbar-nav ml-auto">
+            <a href="login.html" class="btn btn-outline mr-2" style="background-color: brown; color: white;">Login</a>
+            <a href="daftar.html" class="btn" style="background-color: brown; color: white;">Daftar</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Beranda -->
+<section id="home" class="hero-section" data-aos="fade-up">
+    <div class="container">
+        <div class="row align-items-center" style="font-family: berlin sans fb;"> <!-- Menambahkan align-items-center untuk vertikal alignment -->
+            <div class="col-md-6 text-left mb-5"> <!-- Menambahkan text-center untuk horizontal alignment -->
+                <h1 style="font-size: 3rem;">Temukan Pekerjaan Impianmu Dengan <span style="color: brown;">DreamJob.com</span></h1>
+                <p>Dapatkan pekerjaan cocok sesuai dengan profil Anda hari ini</p>
+                <form class="form-inline justify-content-left">
+                    <input type="text" class="form-control w-50 mr-2" placeholder="Posisi atau Perusahaan">
+                    <input type="text" class="form-control w-25 mr-2" placeholder="Lokasi">
+                    <button type="submit" class="btn" style="background-color: brown; color: white;">Cari</button>
+                </form>
+            </div>
+            <div class="col-md-6 text-center"> <!-- Menambahkan text-center untuk gambar -->
+                <img src="img/o.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Lowongan Pekerjaan -->
+<section id="jobs" class="py-5" data-aos="fade-up" style="background-color: brown;">
+    <div class="container">
+        <h2 class="text-white">Lowongan Pekerjaan</h2>
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <h5 class="text-white">Kategori Pekerjaan</h5>
+                <ul class="list-group">
+                    <li class="list-group-item" style="background-color: beige;">IT & Teknologi</li>
+                    <li class="list-group-item" style="background-color: beige;">Keuangan & Akuntansi</li>
+                    <li class="list-group-item" style="background-color: beige;">Desain & Kreatif</li>
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" style="background-color: beige;">
+                        <option value="1">Kesehatan</option>
+                        <option value="2">Pendidikan</option>
+                        <option value="3">Pemasaran</option>
+                        <option value="4">Buruh</option>
+
+                      </select>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <h5 class="text-white">Daftar Lowongan</h5>
+                <div class="card mb-3" data-aos="slide-up">
+                    <div class="card-body" style="background-color: beige;">
+                        <h5 class="card-title ">Posisi: Web Developer</h5>
+                        <p class="card-text">Mengembangkan dan memelihara situs web yang responsif dan dinamis.
+
+                            Syarat: Pengalaman dengan HTML, CSS, JavaScript, dan framework seperti React atau Angular.
+                            
+                            Gaji: Rp8.000.000 - Rp15.000.000 per bulan.
+                            
+                            Cara Melamar: Kirim CV dan portofolio ke hr@company.com.</p>
+                        <a href="#" class="btn" style="background-color: brown; color: white;">Lihat Detail</a>
+                    </div>
+                </div>
+                <!-- Tambahkan lebih banyak lowongan di sini -->
+                <div class="card mb-3" data-aos="slide-up">
+                    <div class="card-body" style="background-color: beige;">
+                        <h5 class="card-title ">Posisi:  Data Analyst</h5>
+                        <p class="card-text">Mengumpulkan, menganalisis, dan menginterpretasikan data untuk mendukung pengambilan keputusan bisnis.
+
+                            Syarat: Familiar dengan SQL, Python, dan alat visualisasi data seperti Tableau.
+                            
+                            Gaji: Rp10.000.000 - Rp18.000.000 per bulan.
+                            
+                            Cara Melamar: Kirimkan CV dan contoh laporan analitik ke recruitment@analytics.co.id.</p>
+                        <a href="#" class="btn" style="background-color: brown; color: white;">Lihat Detail</a>
+                    </div>
+                </div>
+                <div class="card mb-3" data-aos="slide-up">
+                    <div class="card-body" style="background-color: beige;">
+                        <h5 class="card-title ">Posisi: Digital Marketing Specialist</h5>
+                        <p class="card-text">Merancang strategi pemasaran digital, termasuk SEO, SEM, dan media sosial.
+
+                            Syarat: Pengalaman dengan Google Ads, Meta Ads, dan content marketing.
+                            
+                            Gaji: Rp7.000.000 - Rp12.000.000 per bulan.
+                            
+                            Cara Melamar: Email CV ke marketing@digitalagency.com dengan subjek: Digital Marketing Application.</p>
+                        <a href="#" class="btn" style="background-color: brown; color: white;">Lihat Detail</a>
+                    </div>
+                </div>
+                <div class="card mb-3" data-aos="slide-up">
+                    <div class="card-body" style="background-color: beige;">
+                        <h5 class="card-title ">Posisi: Graphic Designer</h5>
+                        <p class="card-text">Mendesain materi visual seperti poster, logo, dan konten media sosial.
+
+                            Syarat: Kemampuan menggunakan Adobe Photoshop, Illustrator, dan After Effects.
+                            
+                            Gaji: Rp6.000.000 - Rp10.000.000 per bulan.
+                            
+                            Cara Melamar: Kirimkan portofolio desain ke design@creativehub.id.</p>
+                        <a href="#" class="btn" style="background-color: brown; color: white;">Lihat Detail</a>
+                    </div>
+                </div>
+                
+                <div class="card mb-3" data-aos="slide-up">
+                    <div class="card-body" style="background-color: beige;">
+                        <h5 class="card-title ">Posisi: HR Manager</h5>
+                        <p class="card-text">Mengelola proses rekrutmen, pengembangan karyawan, dan hubungan industrial.
+
+                            Syarat: Pengalaman minimal 5 tahun di bidang HR.
+                            
+                            Gaji: Rp12.000.000 - Rp20.000.000 per bulan.
+                            
+                            Cara Melamar: Kirim CV dan referensi kerja ke hrmanager@company.com.
+                            
+                            </p>
+                        <a href="#" class="btn" style="background-color: brown; color: white;">Lihat Detail</a>
+                    </div>
+                </div>
+                
+                <div class="card mb-3" data-aos="slide-up">
+                    <div class="card-body" style="background-color: beige;">
+                        <h5 class="card-title ">Posisi: Software Engineer</h5>
+                        <p class="card-text">Merancang, mengembangkan, dan memelihara aplikasi perangkat lunak.
+
+                            Syarat: Menguasai bahasa pemrograman seperti Java, Python, atau C#.
+                            
+                            Gaji: Rp10.000.000 - Rp20.000.000 per bulan.
+                            
+                            Cara Melamar: Kirimkan CV dan kode contoh ke tech@startup.io.</p>
+                        <a href="#" class="btn" style="background-color: brown; color: white;">Lihat Detail</a>
+                    </div>
+                </div>
+                <nav aria-label="...">
+                    <ul class="pagination">
+                      <li class="page-item disabled" style="background-color: brown; color: white;">
+                        <a class="page-link" style="background-color: brown; color: white;">Previous</a>
+                      </li>
+                      <li class="page-item active" aria-current="page" >
+                        <a class="page-link" href="#" style="background-color: brown; color: white;">1</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#" style="background-color: brown; color: white;">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#" style="background-color: brown; color: white;">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" style="background-color: brown; color: white;">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pelamar -->
+<section id="gabung" class="py-5" data-aos="fade-up" style="background-color: ivory;">
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Mengapa mencari pekerjaan di DreamJob.com?</h2>
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-3">
+                <div class="card card-custom text-center p-3">
+                    <img src="img/1.jpg" alt="Icon 1" class="card-img-top">
+                    <h5 class="card-title mt-2">Profil & CV Generator</h5>
+                    <p class="card-text">Buat profil sesuai dengan dibutuhkan recruiter dan buat jadi CV 1x klik.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-3">
+                <div class="card card-custom text-center p-3">
+                    <img src="img/2.jpg" alt="Icon 2" class="card-img-top">
+                    <h5 class="card-title mt-2">Status Lamaran</h5>
+                    <p class="card-text">Pantau status lamaran terbaru Anda dari awal-akhir dengan mudah.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-3">
+                <div class="card card-custom text-center p-3">
+                    <img src="img/3.jpg" alt="Icon 3" class="card-img-top">
+                    <h5 class="card-title mt-2">Preferensi & Job Alert</h5>
+                    <p class="card-text">Cari lowongan sesuai preferensi Anda dalam hitungan detik.</p>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-3">
+                <div class="card card-custom text-center p-3">
+                    <img src="img/4.jpg" alt="Icon 4" class="card-img-top">
+                    <h5 class="card-title mt-2">Profile Matching</h5>
+                    <p class="card-text">Dapatkan informasi lowongan yang cocok dengan profil Anda.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Perusahaan -->
+<section id="companies" class="py-5" style="background-color: brown;" data-aos="fade-up">
+    <div class="container">
+        <h2 style="color: ivory;">Perusahaan</h2>
+        <div class="container my-5">
+            <section id="jual" class="mb-5">
+                <div class="row">
+                    <div class="col-md-4" >
+                        <div class="card" style="padding:1rem; background-color: ivory;">
+                            <img class="card-img-center" src="img/mandiri.jpg"  alt="Lowongan 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Bank Mandiri</h5>
+                                <p class="card-text">Bank Mandiri adalah salah satu bank terbesar di Indonesia, didirikan pada tahun 1998. Bank ini menyediakan berbagai layanan perbankan, termasuk tabungan, kredit, dan layanan investasi, serta memiliki jaringan luas di seluruh Indonesia.
+                                </p>
+                                <a href="#" class="btn" style="background-color: brown; color: white;">Lihat Lowongan</a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="background-color: ivory;">
+                            <img class="card-img-center" src="img/indofood.jpg" alt="Lowongan 2">
+                            <div class="card-body">
+                                <h5 class="card-title">PT Indofood Sukses Makmur Tbk</h5>
+                                <p class="card-text">Perusahaan makanan terkemuka di Indonesia, dikenal dengan produk mie instan Indomie. Indofood juga memproduksi beragam makanan yang berkualitas untuk konsumen.</p>
+                                <a href="#" class="btn" style="background-color: brown; color: white;">Lihat Lowongan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="padding: 23px; background-color: ivory;">
+                            <img class="card-img-center" src="img/unilever.jpg" alt="Lowongan 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Unilever Indonesia</h5>
+                                <p class="card-text">Unilever Indonesia adalah bagian dari Unilever global, yang memproduksi berbagai produk konsumen, termasuk makanan, minuman, sabun, dan produk perawatan pribadi. Didirikan pada tahun 1933, perusahaan ini terkenal dengan merek-merek ikonik seperti Lifebuoy, Dove, dan Bango.</p>
+                                <a href="#" class="btn" style="background-color: brown; color: white;">Lihat Lowongan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="sewa" class="mb-5" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card " style="padding: 1rem; background-color: ivory;">
+                            <img class="card-img-center" src="img/telkom.jpg" alt="Lowongan 4">
+                            <div class="card-body">
+                                <h5 class="card-title">PT Telkom Indonesia (Persero) Tbk</h5>
+                                <p class="card-text">Telkom Indonesia adalah perusahaan telekomunikasi dan penyedia layanan informasi terbesar di Indonesia. Dididirikan pada tahun 1856, Telkom menyediakan berbagai layanan mulai dari telepon dan internet hingga solusi teknologi informasi untuk bisnis.</p>
+                                <a href="#" class="btn" style="background-color: brown; color: white;">Lihat Lowongan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="background-color: ivory;">
+                            <img class="card-img-center" src="img/pertamina.jpg" alt="Lowongan 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Astra International Tbk</h5>
+                                <p class="card-text">Astra International adalah perusahaan konglomerat yang bergerak di berbagai sektor, termasuk otomotif, agribisnis, infrastruktur, dan keuangan. Didirikan pada tahun 1957, Astra menawarkan ragam pilihan dan model terbaru kendaraan bermotor sesuai kebutuhan konsumen. Astra memproduksi Toyota, Daihatsu, Isuzu, Peugeot, UD Trucks, dan sepeda motor Honda. </p>
+                                <a href="#" class="btn" style="background-color: brown; color: white;">Lihat Lowongan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="background-color: ivory;">
+                            <img class="card-img-center" src="img/garuda.jpg" alt="Lowongan 6">
+                            <div class="card-body">
+                                <h5 class="card-title">PT Garuda Indonesia (Persero) Tbk</h5>
+                                <p class="card-text">Garuda Indonesia adalah maskapai penerbangan nasional Indonesia yang didirikan pada tahun 1947. Maskapai ini melayani rute domestik dan internasional, berkomitmen pada layanan pelanggan yang berkualitas, dan berupaya untuk memperkenalkan budaya Indonesia kepada dunia.</p>
+                                <a href="#" class="btn" style="background-color: brown; color: white;">Lihat Lowongan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <nav aria-label="...">
+                <ul class="pagination">
+                      <li class="page-item disabled">
+                        <a class="page-link" style="background-color: brown; color: white;">Previous</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#" style="background-color: brown; color: white;">1</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#" style="background-color: brown; color: white;">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#" style="background-color: brown; color: white;">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" style="background-color: brown; color: white;">Next</a>
+                      </li>
+                    </ul>
+              </nav>
+        </div>
+    </div>
+</section>
+
+    <!-- contact -->
+    <section id="contact" style="height: 90vh; background-color: ivory;">
+    <div class="container section-title text-center mt-5">
+        <h2 style="font-size: 50px;">Hubungi</h2>
+        <p class="mb-5">Hubungi Kami</p>
+    </div>
+
+    <div class="container" data-aos="fade-up" data-aos-delay="500">
+        <div class="row gy-4">
+
+            <div class="col-lg-6">
+                <div class="row gy-4">
+                    <div class="col-md-6">
+                        <div class="border" style="background-color: beige;" data-aos="fade" data-aos-delay="200">
+                            <i class="bi bi-geo-alt" style="font-size: 2rem;"></i>
+                            <h3>Alamat</h3>
+                            <p>Jl. Cinta Sejati</p>
+                            <p>Blok C No.27</p>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="border" style="background-color: beige;" data-aos="fade" data-aos-delay="300">
+                            <i class="bi bi-telephone" style="font-size: 2rem;"></i>
+                            <h3>Telepon</h3>
+                            <p>+81234567890</p>
+                            <p>+80987654321</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="border mt-3" style="background-color: beige;" data-aos="fade" data-aos-delay="400">
+                            <i class="bi bi-envelope" style="font-size: 2rem;"></i>
+                            <h3>Email</h3>
+                            <p>dreamjob@gmail.com</p>
+                            <p>contact@eyahoo.com</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="col-md-6">
+                        <div class="border mt-3" style="background-color: beige;" data-aos="fade" data-aos-delay="500">
+                            <i class="bi bi-clock" style="font-size: 2rem;"></i>
+                            <h3>Jam Buka</h3>
+                            <p>Senin - Sabtu</p>
+                            <p>9:00AM - 05:00PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <form action="forms/contact.php" method="post" class="php-email-form p-3" style="background-color: beige;" data-aos="fade-up" data-aos-delay="200">
+                    <div class="row ">
+                        <div class="col-md-6">
+                            <input type="text" name="name" class="form-control" placeholder="Nama" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="col-12">
+                            <input type="text" class="form-control mt-3" name="subject" placeholder="Subject" required>
+                        </div>
+
+                        <div class="col-12">
+                            <textarea class="form-control mt-3" name="message" rows="6" placeholder="Message" required></textarea>
+                        </div>
+
+                        <div class="col-12 text-center">
+                            <div class="loading" style="display: none;">Loading</div>
+                            <div class="error-message" style="display: none;"></div>
+                            <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
+
+                            <button type="submit" class="btn mt-3" style="background-color: brown; color: white;">Kirim</button>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- End Contact Form -->
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-white pt-5 pb-4" style="background-color: brown;">
+    <div class="container text-center text-md-start">
+        <div class="row">
+            <!-- Logo and Description -->
+            <div class="col-md-4 col-lg-3 mx-auto mb-4">
+                <h3 class="mb-3">
+                    <strong>DreamJob</strong><span>.com</span>
+                </h3>
+                <p>Kami portal lowongan kerja pertama di Indonesia</p>
+            </div>
+
+            <!-- Tentang Karir -->
+            <div class="col-md-2 col-lg-2 mx-auto mb-4">
+                <h5 class="fw-bold mb-3">Tentang DreamJob.com</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Tentang Kami</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Kontak Kami</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Inspirasi</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Bergabung Bersama Kami</a></li>
+                </ul>
+            </div>
+
+            <!-- Untuk Jobseeker -->
+            <div class="col-md-2 col-lg-2 mx-auto mb-4">
+                <h5 class="fw-bold mb-3">Untuk Jobseeker</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Lowongan</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Perusahaan</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Status Lamaran</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Lowongan Disimpan</a></li>
+                </ul>
+            </div>
+
+            <!-- Untuk Perusahaan -->
+            <div class="col-md-2 col-lg-2 mx-auto mb-4">
+                <h5 class="fw-bold mb-3">Untuk Perusahaan</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Beriklan dengan Kami</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">FAQ untuk Perusahaan</a></li>
+                </ul>
+            </div>
+
+            <!-- Bantuan -->
+            <div class="col-md-2 col-lg-2 mx-auto mb-4">
+                <h5 class="fw-bold mb-3">Bantuan</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">DreamJob Care</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Syarat dan Ketentuan</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="text-center mt-4">
+            <p class="mb-3">Ikuti Kami</p>
+            <a href="#" class="text-white mx-2"><i class="bi bi-telegram"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-tiktok"></i></a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-4">
+            <p>&copy; 2008 - 2025 | PT Dream Job</p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
